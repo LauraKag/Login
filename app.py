@@ -18,7 +18,7 @@ def login():
     if request.method == 'POST':
         if request.form['username'] == 'admin' and request.form['password'] == 'admin':
            
-            return redirect('https://iag-project.herokuapp.com/')
+            return redirect('https://termintegrationproject.herokuapp.com/')
    
         else:
             error = 'Insert valid credentials to continue'
