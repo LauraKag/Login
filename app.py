@@ -1,4 +1,3 @@
-
 # import os
 from flask import Flask, jsonify, render_template, request, redirect, url_for, flash
 # from flask_cors import CORS
@@ -10,6 +9,8 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 
 
+
+
 @app.route("/", methods=['GET', 'POST'])
 def login():
 
@@ -17,11 +18,11 @@ def login():
     if request.method == 'POST':
         if request.form['username'] == 'admin' and request.form['password'] == 'admin':
            
-            return redirect('https://termintegrationproject.herokuapp.com/')
+            return redirect('https://iag-project.herokuapp.com/')
    
         else:
             error = 'Insert valid credentials to continue'
-    return render_template('register.html', error=error)
+    return render_template('login.html', error=error)
 
 
 if __name__ == '__main__':

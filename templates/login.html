@@ -1,0 +1,55 @@
+<html>
+<head>
+      <title>Iberia Analytics - login page</title>
+      <link rel="stylesheet" href="static/styles.css">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- <body onload="TeamPage()"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark navbar-fixed-top">
+        <!-- <img class="logo-image card-img-top img" style="max-width:120px" src="static/img/ib.png" > -->
+        <br> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!-- <a class="nav-link" href="http://127.0.0.1:5000/team">Home <span class="sr-only">(current)</span></a> -->
+            </li>
+            
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="http://127.0.0.1:5000/login">Login</a> -->
+            </li>
+          </ul>
+        </div>
+</nav>
+    <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">  
+    <!--<img src="static/img/GitHub-Logo.png" class="logo-image card-img-top img" id="icon" alt="User Icon" /> -->
+      <a  href="https://github.com/Arthurmf01/IAG_Project_login" target="_blank" ><img class="logo-image card-img-top img" id="icon" alt="User Icon" src="static/img/test4.jpg"></a>
+    </div>
+
+    <!-- Login Form -->
+    <form action="" method="post">
+                <input type="text" placeholder="Username" name="username" value="{{
+                  request.form.username }}">
+                 <input type="password" placeholder="Password" name="password" value="{{
+                  request.form.password }}">
+                <input class="btn btn-default" type="submit" value="Login">
+    </form>
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+              {% endif %}
+    </div>
+</div>
+  </body>
+
+</html>
